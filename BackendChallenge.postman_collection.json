@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "f2794ce1-9dba-4b54-b141-896a4fababf9",
+		"name": "BackendChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetComments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/comments?EntityIdentifier=teste&PageNumber=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"comments"
+					],
+					"query": [
+						{
+							"key": "EntityIdentifier",
+							"value": "teste"
+						},
+						{
+							"key": "PageNumber",
+							"value": "1"
+						},
+						{
+							"key": "TimeZoneID",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddComent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EntityIdentifier\" : \"teste\",\r\n    \"Author\" : \"Manel\",\r\n    \"MarkedUpText\" : \"<html> <div id='cenas'> </div> </html>\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/comments/add-comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"comments",
+						"add-comment"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "teste",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/comments/new-comments?EntityIdentifier=teste&PageNumber=1&CommentsIds=0&CommentsIds=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"comments",
+						"new-comments"
+					],
+					"query": [
+						{
+							"key": "EntityIdentifier",
+							"value": "teste"
+						},
+						{
+							"key": "PageNumber",
+							"value": "1"
+						},
+						{
+							"key": "CommentsIds",
+							"value": "0"
+						},
+						{
+							"key": "CommentsIds",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
